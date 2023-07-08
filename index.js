@@ -168,6 +168,10 @@ console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
 			3a. meyveler dizisinin ilk ve son elemanlarını diziden çıkartın. (.pop ve .shift metodlarını kullanın)
  */
 //3a çözümü
+
+meyveler.pop();
+meyveler.shift();
+console.log(meyveler);
 /* kodlar buraya */
 
 /* 			3b.  Bir tavşan ve bir kirpi arkadaşlar sebzeler dizimizin peşine düştü. Tavşan => 🐇 , Kirpi=> 🦔 , 
@@ -177,14 +181,19 @@ Kirpiyi dizinin son elemanına ekleyin 🦔
  */
 //3b çözümü
 /* kodlar buraya */
+sebzeler.unshift("🐇 tavşan");
+sebzeler.push("🦔 kirpi");
+console.log("Saldırı:", sebzeler);
 
 /* 			3c. manav isminde bir dizi oluşturun.`meyveler` dizisi ilk elemanlara, `sebzeler` dizisi son 
 elemanlara denk gelecek şekilde, iki diziyi birleştirip sonucu manav dizisine aktarın. (.concat metodu)
  */
 //3c çözümü
 /* kodlar buraya */
-
-var manav;
+sebzeler.shift();
+sebzeler.pop();
+var manav = meyveler.concat(sebzeler);
+console.log(manav);
 
 /* 	GÖREV 4:
 		Yeni kurulmuş bir mesajlaşma startup firması atılan mesajları emojilerle zenginleştirmek istiyor. 
