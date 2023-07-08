@@ -181,17 +181,17 @@ Kirpiyi dizinin son elemanına ekleyin 🦔
  */
 //3b çözümü
 /* kodlar buraya */
-sebzeler.unshift("🐇 tavşan");
-sebzeler.push("🦔 kirpi");
-console.log("Saldırı:", sebzeler);
+sebzeler.unshift("🐇");
+sebzeler.push("🦔");
+console.log(sebzeler);
 
 /* 			3c. manav isminde bir dizi oluşturun.`meyveler` dizisi ilk elemanlara, `sebzeler` dizisi son 
 elemanlara denk gelecek şekilde, iki diziyi birleştirip sonucu manav dizisine aktarın. (.concat metodu)
  */
 //3c çözümü
 /* kodlar buraya */
-sebzeler.shift();
-sebzeler.pop();
+// sebzeler.shift();
+
 var manav = meyveler.concat(sebzeler);
 console.log(manav);
 
@@ -212,9 +212,34 @@ console.log(manav);
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+// function emojileriDonustur(mesaj, emojiler) {
+//   for (let sembol in emojiler) {
+//     let semboldonusum = sembol.toLowerCase();
+
+//     mesaj = mesaj.replaceAll(semboldonusum, emojiler[sembol]);
+//   }
+//   return mesaj;
+// }
+
+// let mesaj = ":D";
+// console.log(emojileriDonustur(mesaj.emojiler));
+
+function emojileriDonustur(mesaj, emojiler) {
+  for (var sembol in emojiler) {
+    var sembolBuyuk = sembol.toUpperCase();
+    var sembolKucuk = sembol.toLowerCase();
+
+    mesaj = mesaj.replaceAll(sembolBuyuk, emojiler[sembol]);
+    mesaj = mesaj.replaceAll(sembolKucuk, emojiler[sembol]);
+  }
+
+  return mesaj;
 }
+
+var mesaj = "Bugün çok mutluyum! :D";
+var donusturulmusMesaj = emojileriDonustur(mesaj, emojiler);
+
+console.log(donusturulmusMesaj);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
